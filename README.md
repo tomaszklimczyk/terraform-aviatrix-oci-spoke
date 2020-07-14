@@ -11,7 +11,7 @@ This module deploys a VCN, an Aviatrix spoke gateway, and attaches it to an Avia
 ### Usage Example
 
 ```
-# OCI Transit Module
+# OCI Spoke Module
 module "oci_spoke_1" {
   source             = "terraform-aviatrix-modules/oci-spoke/aviatrix"
   version            = "1.0.0"
