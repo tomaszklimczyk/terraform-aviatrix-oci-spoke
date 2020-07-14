@@ -43,7 +43,7 @@ variable "oci_gw_size" {
 variable "avx_transit_gateway" {
   description = "The Aviatrix Transit Gateway to attach the Spoke Gateway to"
   type        = string
-  default     = "us-ashburn-1-transit"
+  default     = ""
 }
 
 variable "ha_gw" {
