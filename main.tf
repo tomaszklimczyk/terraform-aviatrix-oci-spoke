@@ -18,7 +18,6 @@ resource "aviatrix_spoke_gateway" "oci_spoke_gw" {
   gw_size            = var.oci_gw_size
   account_name       = var.oci_account_name
   subnet             = aviatrix_vpc.oci_spoke_vcn.subnets[0].cidr
-  allocate_new_eip   = false
 }
 
 # HA OCI Spoke Gateway 
@@ -33,6 +32,5 @@ resource "aviatrix_spoke_gateway" "oci_spoke_hagw" {
   account_name       = var.oci_account_name
   subnet             = aviatrix_vpc.oci_spoke_vcn.subnets[0].cidr
   ha_subnet             = aviatrix_vpc.oci_spoke_vcn.subnets[0].cidr
-  allocate_new_eip   = false
   ha_gw_size         = var.oci_gw_size
 }
