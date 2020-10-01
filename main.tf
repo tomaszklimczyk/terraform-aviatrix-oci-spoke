@@ -1,7 +1,7 @@
 # Aviatrix OCI Spoke VPC
 resource "aviatrix_vpc" "oci_spoke_vcn" {
   cloud_type   = 16
-  name         = "av-${var.oci_region}-spoke-vcn"
+  name         = "avx-${var.name}-spoke"
   region       = var.oci_region
   cidr         = var.oci_spoke_cidr
   account_name = var.oci_account_name
