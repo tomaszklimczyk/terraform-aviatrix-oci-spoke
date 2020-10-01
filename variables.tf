@@ -52,3 +52,7 @@ variable "ha_gw" {
     default = true
 }
 
+variable "name" {
+  description = "Name to assign to objects"
+  type        = string
+}
