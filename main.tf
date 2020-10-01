@@ -10,7 +10,7 @@ resource "aviatrix_vpc" "oci_spoke_vcn" {
 # Single OCI Spoke Gateway 
 resource "aviatrix_spoke_gateway" "oci_spoke_gw" {
   count              = var.ha_gw ? 0 : 1
-  gw_name            = "${var.oci_region}-spoke"
+  gw_name            = "avx-${var.name}-spoke"
   vpc_id             = aviatrix_vpc.oci_spoke_vcn.name
   cloud_type         = 16
   vpc_reg            = var.oci_region
@@ -24,7 +24,7 @@ resource "aviatrix_spoke_gateway" "oci_spoke_gw" {
 # HA OCI Spoke Gateway 
 resource "aviatrix_spoke_gateway" "oci_spoke_hagw" {
   count              = var.ha_gw ? 1 : 0
-  gw_name            = "${var.oci_region}-spoke"
+  gw_name            = "avx-${var.name}-spoke"
   vpc_id             = aviatrix_vpc.oci_spoke_vcn.name
   cloud_type         = 16
   vpc_reg            = var.oci_region
